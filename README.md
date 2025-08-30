@@ -9,7 +9,7 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 
 ## 📲 Descargar
 
-👉 **[APK v1.0.0](https://github.com/<tu-usuario>/<tu-repo>/releases/latest/download/OrganizadorEmocional_v1.0.0.apk)**  
+👉 **https://github.com/ceciliacarpe/OrganizadorEmocional/releases/latest/download/Organizador.Emocional.apk**  
 
 ---
 
