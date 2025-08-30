@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Organizador Emocional</string>
+    <string-array name="prioridades">
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
+    </string-array>
+
+    <string name="default_web_client_id">929904957258-9muk3ckuiepr405kpef4inhstr5aliv7.apps.googleusercontent.com</string>
+
+    <string-array name="periodos">
+        <item>Día</item>
+        <item>Semana</item>
+        <item>Mes</item>
+        <item>Año</item>
+    </string-array>
+
+</resources>

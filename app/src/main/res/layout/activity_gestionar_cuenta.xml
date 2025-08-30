@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/rootContainer"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground">
+
+
+    <TextView
+        android:id="@+id/txtTituloCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:text="Información de tu cuenta"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:fontFamily="@font/zt_formom"
+        app:layout_anchor="@id/scrollCuenta"
+        app:layout_anchorGravity="top|center" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:padding="20dp"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txtUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/colorText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplaylight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:fontFamily="@font/neuehaasdisplaylight"
+                app:layout_constraintTop_toBottomOf="@id/txtUsuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <Switch
+                android:id="@+id/switch_goo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Sincronización con Google Calendar"
+                android:textColor="@color/colorText"
+                android:textSize="17sp"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintTop_toBottomOf="@id/txtEmail"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/infoSincro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Conecta tu día a día con Google Calendar y mantén tus tareas siempre a la vista.
+                \nTodas las tareas que tengas en la aplicación aparecerán en tu calendario."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="@+id/btnCambiarPassword"
+                app:layout_constraintEnd_toEndOf="@+id/btnCambiarPassword"
+                app:layout_constraintTop_toBottomOf="@id/switch_goo"
+                android:padding="2dp"/>
+
+            <TextView
+                android:id="@+id/labelContrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Cambiar contraseña"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoSincro" />
+
+            <TextView
+                android:id="@+id/infoContrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Recibirás un correo electrónico con los pasos que deberás seguir para establecer tu nueva contraseña."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="@+id/btnCambiarPassword"
+                app:layout_constraintEnd_toEndOf="@+id/btnCambiarPassword"
+                app:layout_constraintTop_toBottomOf="@id/labelContrasenia"
+                android:padding="2dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCambiarPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Cambiar mi contraseña"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:textStyle="bold"
+                app:backgroundTint="?attr/colorPrimary"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoContrasenia" />
+
+            <TextView
+                android:id="@+id/labelCerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Cerrar sesión"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCambiarPassword" />
+
+            <TextView
+                android:id="@+id/infoCerrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Recuerda: siempre podrás volver cuando lo necesites."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="@+id/btnCambiarPassword"
+                app:layout_constraintEnd_toEndOf="@+id/btnCambiarPassword"
+                app:layout_constraintTop_toBottomOf="@id/labelCerrar"
+                android:padding="2dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Cerrar sesión"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:textStyle="bold"
+                app:backgroundTint="?attr/colorPrimary"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoCerrar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

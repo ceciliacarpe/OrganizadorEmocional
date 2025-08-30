@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="splash_background">#6200EE</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="base">#FDF8E2</color>
+    <color name="background_color">#F7F4F0</color>
+
+
+    <!-- Colores principales de la app -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#F8F9FA</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="colorText">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorTextOnPrimary">#FFFFFF</color>
+    <color name="colorOutline">#DDDDDD</color>
+    <color name="colorPrimaryLight">#D1D7F6</color>
+
+    <!-- Colores para prioridades -->
+    <color name="colorPriorityHighSelected">#F44336</color>
+    <color name="colorPriorityHighOutline">#FFCDD2</color>
+    <color name="colorPriorityMediumSelected">#FF9800</color>
+    <color name="colorPriorityMediumOutline">#FFE0B2</color>
+    <color name="colorPriorityLowSelected">#4CAF50</color>
+    <color name="colorPriorityLowOutline">#C8E6C9</color>
+    <color name="selector_text_priority">#212121</color>
+    <color name="btn_home">#660033</color>
+
+
+       <!-- Colores para prioridades -->
+    <color name="prioridad_alta">#FFCDD2</color>
+    <color name="prioridad_media">#FFF9C4</color>
+    <color name="prioridad_baja">#C8E6C9</color>
+
+    <!-- Grises -->
+    <color name="gray">#9E9E9E</color>
+    <color name="gray_light">#EEEEEE</color>
+    <color name="gray_dark">#424242</color>
+
+    <!-- Colores de acción -->
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+
+    <color name="motivado_primary">#658DDC</color>
+    <color name="motivado_dark">#F3440A</color>
+    <color name="motivado_bg">#FAF6C4</color>
+    <color name="motivado_secondary">#F6CF7D</color>
+
+    <color name="relajado_primary">#8DB0D0</color>
+    <color name="relajado_dark">#437118</color>
+    <color name="relajado_bg">#F5F3D8</color>
+    <color name="relajado_secondary">#CCEBBA</color>
+
+    <color name="estresado_primary">#F0704F</color>
+    <color name="estresado_dark">#C52103</color>
+    <color name="estresado_bg">#FAE0C8</color>
+    <color name="estresado_secondary">#E7B297</color>
+
+    <color name="desmotivado_primary">#39ABB3</color>
+    <color name="desmotivado_dark">#1D2A62</color>
+    <color name="desmotivado_bg">#D4E9EF</color>
+    <color name="desmotivado_secondary">#B1D4D7</color>
+
+
+
+
+
+</resources>

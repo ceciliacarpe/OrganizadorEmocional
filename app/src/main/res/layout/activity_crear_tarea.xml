@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Nueva Tarea"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/zt_formom"/>
+
+        <TextView
+            android:id="@+id/tituloLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Título"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTitulo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tituloTareaEditable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
+                android:fontFamily="@font/neuehaasdisplaylight"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Descripción"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTitulo"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputDescripcion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descripcionTareaEditable"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideOverlay"
+                android:fontFamily="@font/neuehaasdisplaylight"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/prioridad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Prioridad"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputDescripcion"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPrioridad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prioridad">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonAlta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_priority_high"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Alta"
+                android:textColor="@color/selector_text_priority"
+                android:textSize="16sp"
+                android:fontFamily="@font/neuehaasdisplaylight"/>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonMedia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_priority_medium"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Media"
+                android:textColor="@color/selector_text_priority"
+                android:textSize="16sp"
+                android:fontFamily="@font/neuehaasdisplaylight"/>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonBaja"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_priority_low"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Baja"
+                android:textColor="@color/selector_text_priority"
+                android:textSize="16sp"
+                android:fontFamily="@font/neuehaasdisplaylight"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Fecha"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupPrioridad"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/seleccionarFechaBoton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:gravity="start|center_vertical"
+            android:padding="16dp"
+            android:text="Seleccionar fecha"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorText"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fecha"
+            app:strokeColor="@color/colorOutline"
+            app:strokeWidth="1dp"
+            android:fontFamily="@font/neuehaasdisplaylight"/>
+
+        <CheckBox android:id="@+id/checkbox_aplazarT"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="?attr/colorPrimaryVariant"
+            app:layout_constraintTop_toBottomOf="@+id/seleccionarFechaBoton"
+            android:text="Aplazar tarea para el día siguiente si no es completada."
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <TextView
+            android:id="@+id/emociones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="¿Qué emoción te produce esta tarea?"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_aplazarT"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupEmociones"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guardarTareaBoton"
+            app:layout_constraintTop_toBottomOf="@+id/emociones">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonAlegria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:button="@null"
+                android:background="@drawable/selector_card_background"
+                android:gravity="center|bottom"
+                android:paddingBottom="8dp"
+                android:drawableTop="@drawable/ic_e_feliz"
+                android:drawablePadding="8dp"
+                android:text="Alegría"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/zt_formom"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonTristeza"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:button="@null"
+                android:background="@drawable/selector_card_background"
+                android:gravity="center|bottom"
+                android:paddingBottom="8dp"
+                android:drawableTop="@drawable/ic_e_tristeza"
+                android:drawablePadding="8dp"
+                android:text="Tristeza"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/zt_formom"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonIra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:button="@null"
+                android:background="@drawable/selector_card_background"
+                android:gravity="center|bottom"
+                android:paddingBottom="8dp"
+                android:drawableTop="@drawable/ic_e_ira"
+                android:drawablePadding="8dp"
+                android:text="Ira"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/zt_formom"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonMiedo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:button="@null"
+                android:background="@drawable/selector_card_background"
+                android:gravity="center|bottom"
+                android:paddingBottom="8dp"
+                android:drawableTop="@drawable/ic_e_miedo"
+                android:drawablePadding="8dp"
+                android:text="Miedo"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/zt_formom"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonNeutra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:button="@null"
+                android:background="@drawable/selector_card_background"
+                android:gravity="center|bottom"
+                android:paddingBottom="8dp"
+                android:drawableTop="@drawable/ic_e_neutral"
+                android:drawablePadding="8dp"
+                android:text="Neutra"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/zt_formom"/>
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/guardarTareaBoton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Guardar tarea"
+            android:textSize="18sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupEmociones"
+            app:layout_constraintVertical_bias="0.9"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:fontFamily="@font/neuehaasdisplayroman"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

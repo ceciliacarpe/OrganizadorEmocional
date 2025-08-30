@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OrganizadorEmocional" parent="Theme.MaterialComponents.Light.NoActionBar">>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnBackground">@color/colorBackground</item>
+        <item name="colorSecondary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlActivated">#1d2a62</item>
+    </style>
+
+    <style name="CustomEstadoOption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/neuehaasdisplaylight</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!-- Temas por ánimo -->
+    <style name="AppTheme.MOTIVADO" parent="Theme.OrganizadorEmocional">
+        <item name="colorPrimary">@color/motivado_primary</item>
+        <item name="colorPrimaryVariant">@color/motivado_dark</item>
+        <item name="colorOnBackground">@color/motivado_bg</item>
+        <item name="colorSecondary">@color/motivado_secondary</item>
+    </style>
+
+    <style name="AppTheme.RELAJADO" parent="Theme.OrganizadorEmocional">
+        <item name="colorPrimary">@color/relajado_primary</item>
+        <item name="colorPrimaryVariant">@color/relajado_dark</item>
+        <item name="colorOnBackground">@color/relajado_bg</item>
+        <item name="colorSecondary">@color/relajado_secondary</item>
+
+    </style>
+
+    <style name="AppTheme.ESTRESADO" parent="Theme.OrganizadorEmocional">
+        <item name="colorPrimary">@color/estresado_primary</item>
+        <item name="colorPrimaryVariant">@color/estresado_dark</item>
+        <item name="colorOnBackground">@color/estresado_bg</item>
+        <item name="colorSecondary">@color/estresado_secondary</item>
+
+    </style>
+
+    <style name="AppTheme.DESMOTIVADO" parent="Theme.OrganizadorEmocional">
+        <item name="colorPrimary">@color/desmotivado_primary</item>
+        <item name="colorPrimaryVariant">@color/desmotivado_dark</item>
+        <item name="colorOnBackground">@color/desmotivado_bg</item>
+        <item name="colorSecondary">@color/desmotivado_secondary</item>
+
+    </style>
+
+</resources>

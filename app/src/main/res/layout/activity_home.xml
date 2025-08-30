@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootContainer"
+    android:background="?attr/colorOnBackground"
+    android:padding="16dp">
+
+    <!-- Botón menú -->
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/lista"
+        android:contentDescription="Menú"
+        android:scaleType="fitCenter"
+        app:tint="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botón usuario  -->
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/usuario"
+        android:contentDescription="Usuario"
+        android:scaleType="fitCenter"
+        app:tint="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Caja de mensaje motivacional -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMotivacional"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="?attr/colorSecondary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btnMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txtMensajeMotivacional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensajes motivacionales según e. animo"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            android:padding="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/neuehaasdisplayroman" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Estado emocional de hoy -->
+    <TextView
+        android:id="@+id/txtEstadoEmocional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu estado de ánimo de hoy es"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/neuehaasdisplayroman"
+        app:layout_constraintTop_toBottomOf="@id/cardMotivacional"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEEmocional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E. ánimo"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="40sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/zt_formom"
+        app:layout_constraintTop_toBottomOf="@id/txtEstadoEmocional"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Próximas tareas -->
+    <TextView
+        android:id="@+id/txtTituloProximasTareas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tus próximas tareas:"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/neuehaasdisplayroman"
+        app:layout_constraintTop_toBottomOf="@id/txtEEmocional"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVistaPrevia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloProximasTareas"
+        app:layout_constraintBottom_toTopOf="@id/btnTareasOrdenadas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <!-- Botón ver tareas ordenadas -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTareasOrdenadas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver tareas de hoy ordenadas"
+        app:cornerRadius="12dp"
+        android:textSize="14sp"
+        app:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/btnVerTareas"
+        app:layout_constraintStart_toStartOf="@id/btnCrearTarea"
+        app:layout_constraintBottom_toTopOf="@id/btnVerTareas"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:fontFamily="@font/neuehaasdisplayroman" />
+
+    <!-- Botón Añadir tarea -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCrearTarea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Añadir tarea"
+        app:cornerRadius="12dp"
+        android:textSize="14sp"
+        app:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnVerTareas"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:fontFamily="@font/neuehaasdisplayroman" />
+
+    <!-- Botón Ver tareas -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerTareas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver tareas"
+        app:cornerRadius="12dp"
+        android:textSize="14sp"
+        app:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCrearTarea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:fontFamily="@font/neuehaasdisplayroman" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "929904957258",
+    "project_id": "organizadoremocional",
+    "storage_bucket": "organizadoremocional.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929904957258:android:9c59a6b1bd2bb5991993b3",
+        "android_client_info": {
+          "package_name": "com.example.organizadoremocional"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929904957258-9muk3ckuiepr405kpef4inhstr5aliv7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.organizadoremocional",
+            "certificate_hash": "823f63b82c3b42f28a8903558f908389312fc51c"
+          }
+        },
+        {
+          "client_id": "929904957258-ptdaguaflqm62p2up14h042s0n3s6gj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAptfXoLmAIhCIGWhtWvlOVsgnbLzS-kU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929904957258-ptdaguaflqm62p2up14h042s0n3s6gj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

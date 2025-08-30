@@ -1,0 +1,15 @@
+<!-- res/drawable/selector_card_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@android:color/white" /> <!-- Fondo blanco cuando está seleccionado -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" /> <!-- Fondo blanco también cuando NO está seleccionado -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+</selector>

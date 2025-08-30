@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground">
+
+    <!-- Título  de la página -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Detalle de la tarea"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_anchor="@id/nestedScrollView"
+        app:layout_anchorGravity="top|center"
+        android:fontFamily="@font/zt_formom"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tituloLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tituloCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="8dp"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tituloLabel">
+
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    tools:text="Título de la tarea"
+                    android:fontFamily="@font/neuehaasdisplaylight"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Descripción -->
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Descripción"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tituloCard"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/descripcionCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionLabel">
+
+                <TextView
+                    android:id="@+id/txtDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    tools:text="Descripción de la tarea"
+                    android:fontFamily="@font/neuehaasdisplaylight"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Prioridad -->
+            <TextView
+                android:id="@+id/prioridadLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Prioridad"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descripcionCard"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/prioridadCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/prioridadLabel">
+
+                <TextView
+                    android:id="@+id/txtPrioridad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    tools:text="Alta"
+                    android:fontFamily="@font/neuehaasdisplaylight"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Emoción -->
+            <TextView
+                android:id="@+id/emocionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Emoción"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/prioridadCard"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/emocionCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emocionLabel">
+
+                <TextView
+                    android:id="@+id/txtEmocion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    tools:text="Alegría"
+                    android:fontFamily="@font/neuehaasdisplaylight"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Fecha -->
+            <TextView
+                android:id="@+id/fechaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Fecha a Realizar"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emocionCard"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <CheckBox android:id="@+id/checkbox_aplazarT"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/fechaCard"
+                android:text="Aplazar tarea para el día siguiente si no es completada."
+                android:fontFamily="@font/neuehaasdisplayroman"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:buttonTint="?attr/colorPrimaryVariant"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fechaCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?attr/colorSecondary"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fechaLabel">
+
+                <TextView
+                    android:id="@+id/txtFechaRealizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    tools:text="15/05/2023"
+                    android:fontFamily="@font/neuehaasdisplaylight"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Botón Editar-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarTareas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Editar tarea"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                app:backgroundTint="?attr/colorPrimary"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_aplazarT"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <!-- Botón marcar como completada -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMarcarCompletada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Marcar como completada"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                app:backgroundTint="@color/colorPriorityLowSelected"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnEliminarTareas"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+            <!-- Botón Eliminar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEliminarTareas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Eliminar tarea"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                app:backgroundTint="@color/colorPriorityHighSelected"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnEditarTareas"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

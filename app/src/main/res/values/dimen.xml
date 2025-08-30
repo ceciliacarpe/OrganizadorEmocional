@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="screen_hpad">16dp</dimen>
+    <dimen name="screen_vpad">24dp</dimen>
+    <dimen name="section_gap">16dp</dimen>
+    <dimen name="card_inset">0dp</dimen>
+    <dimen name="card_padding">24dp</dimen>
+
+    <dimen name="card_max_width">520dp</dimen>
+</resources>

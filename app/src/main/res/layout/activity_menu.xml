@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground">
+
+    <TextView
+        android:id="@+id/txtTituloCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Opciones"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/zt_formom"
+        app:layout_anchor="@id/scrollCuenta"
+        app:layout_anchorGravity="top|center" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:padding="20dp"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/labelEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Estado emocional de hoy:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtEAnimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/neuehaasdisplaylight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/labelEstado"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActualizarEAnimo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Cambiar el estado emocional"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:textStyle="bold"
+                app:backgroundTint="?attr/colorPrimary"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelEstado" />
+
+            <Switch
+                android:id="@+id/switch_notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Activar notificaciones"
+                android:textColor="@color/colorText"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintTop_toBottomOf="@id/btnActualizarEAnimo"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/infoNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Si activas las notificaciones recibirás a lo largo del día: \n\t - Mensajes motivacionales según tu estado de ánimo.
+                \n\t - Alertas de tareas de alta prioridad.
+                \n\t - Conteo de tareas pendientes."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="@+id/btnActualizarEAnimo"
+                app:layout_constraintEnd_toEndOf="@+id/btnActualizarEAnimo"
+                app:layout_constraintTop_toBottomOf="@id/switch_notifications"
+                android:padding="2dp"/>
+
+            <TextView
+                android:id="@+id/labelEstadisticas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Estadísticas"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoNotificaciones"/>
+
+            <TextView
+                android:id="@+id/infoHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="¡Consulta tu progreso! \nVisualiza tu historial diario, semanal, mensual y anual de:
+                \n\t - Número de tareas pendientes y completadas.
+                \n\t - Tiempo en cada estado de ánimo."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="@+id/btnActualizarEAnimo"
+                app:layout_constraintEnd_toEndOf="@+id/btnActualizarEAnimo"
+                app:layout_constraintTop_toBottomOf="@id/labelEstadisticas"
+                android:padding="2dp"/>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/estadisticas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Ver historial"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:textStyle="bold"
+                app:backgroundTint="?attr/colorPrimary"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neuehaasdisplayroman"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoHistorial" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
