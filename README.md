@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icono.png" alt="Logo" width="150"/>
+</p>
+
 # Organizador Emocional 📱🧠
 
 Aplicación Android desarrollada en **Kotlin** como parte del **Trabajo de Fin de Grado (Universidad de Granada)**.  
@@ -28,9 +32,9 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 ## 🖼️ Capturas
 
 <p align="center">
-  <img src="assets/screenshots/home.png" width="30%"/>
-  <img src="assets/screenshots/mood.png" width="30%"/>
-  <img src="assets/screenshots/tasks.png" width="30%"/>
+  <img src="captura_home.png" width="30%"/>
+  <img src="captura_tarea.png" width="30%"/>
+  <img src="captura_estadisticas.png" width="30%"/>
 </p>
 
 ---
