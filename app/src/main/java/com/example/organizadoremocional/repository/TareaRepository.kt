@@ -315,15 +315,40 @@ class TareaRepository {
     /**
      * Devuelve solo las tareas no completadas visibles hoy (con aplazables)
      */
-    suspend fun getTareasAsignadasHoyConAplazables(): List<Tarea> {
-        val cal0  = Calendar.getInstance().apply { zeroTime() }
-        val start = cal0.time
-        val end   = Calendar.getInstance().apply { endOfDay() }.time
+    suspend fun getTareasAsignadasHoyConAplazables(): List<Tarea> = withContext(Dispatchers.IO) {
+        val calInicio = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        val start = calInicio.time
 
-        val todasHoy = getTareasAsignadasEnRango(start, end)
+        val end = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 23)
+            set(Calendar.MINUTE, 59)
+            set(Calendar.SECOND, 59)
+            set(Calendar.MILLISECOND, 999)
+        }.time
 
-        return todasHoy.filter { !it.completada }
+        val snap = tareasCol()
+            .whereEqualTo("completada", false)
+            .get()
+            .await()
+
+        snap.documents.mapNotNull { doc ->
+            doc.toObject(Tarea::class.java)?.apply {
+                idTarea = doc.id
+                emocion  = Emocion.valueOf(doc.getString("emocion") ?: Emocion.NEUTRA.name)
+            }
+        }.filter { tarea ->
+            val fr = tarea.fechaRealizar
+            val dueHoy = fr != null && !fr.before(start) && !fr.after(end)
+            val aplazableArrastrada = tarea.aplazar && (fr == null || fr.before(start))
+            dueHoy || aplazableArrastrada
+        }
     }
+
 
     /**
      * Devuelve tareas pendientes del mes.
