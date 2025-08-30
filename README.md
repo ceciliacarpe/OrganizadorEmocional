@@ -34,7 +34,7 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 <p align="center">
   <img src="captura_home.png" width="20%"/>
   <img src="captura_tarea.png" width="20%"/>
-  <img src="captura_estadisticas.png" width="20%"/>
+  <img src="captura_estadisticas.jpg" width="20%"/>
 </p>
 
 ---
