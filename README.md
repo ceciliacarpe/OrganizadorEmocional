@@ -38,7 +38,7 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 ## ⚙️ Tecnologías utilizadas
 
 - **Lenguaje:** Kotlin  
-- **Arquitectura:** AndroidX, ViewModel + LiveData  
+- **Arquitectura:**  Model–View–ViewModel, LiveData  
 - **Base de datos:** Firebase Firestore  
 - **Sincronización:** Google Calendar API  
 - **Background tasks:** WorkManager   
