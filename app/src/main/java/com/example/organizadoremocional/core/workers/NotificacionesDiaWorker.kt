@@ -32,7 +32,7 @@ class NotificacionesDiaWorker(context: Context, params: WorkerParameters) : Coro
             Pair(15, 0),
             Pair(18, 0)
         )
-        private val horarioTareas = Pair(22,5 )
+        private val horarioTareas = Pair(21,0 )
 
         /**
          * Programa todas las notificaciones
