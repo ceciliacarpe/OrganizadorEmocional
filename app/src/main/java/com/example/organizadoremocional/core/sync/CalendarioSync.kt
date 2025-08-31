@@ -59,9 +59,9 @@ object CalendarioSync {
      * @throws GoogleJsonResponseException si ocurre un error en la API de Google Calendar.
      */
     suspend fun syncAllPendingTasks(context: Context, accountName: String) {
-        val token   = getAuthToken(context, accountName)
+        val token = getAuthToken(context, accountName)
         val service = buildService(token)
-        val repo    = TareaRepository()
+        val repo = TareaRepository()
 
         // Marca inicio del día
         val inicioHoy = Calendar.getInstance().apply {
@@ -97,10 +97,10 @@ object CalendarioSync {
 
         // Inserta o actualiza cada tarea
         tareas.forEach { tarea ->
-            val base     = tarea.fechaRealizar!!.takeUnless { it.before(inicioHoy) } ?: inicioHoy
+            val base = tarea.fechaRealizar!!.takeUnless { it.before(inicioHoy) } ?: inicioHoy
             val startStr = formatYMD(base)
-            val endDate  = Calendar.getInstance().apply { time = base; add(Calendar.DATE, 1) }.time
-            val endStr   = formatYMD(endDate)
+            val endDate = Calendar.getInstance().apply { time = base; add(Calendar.DATE, 1) }.time
+            val endStr = formatYMD(endDate)
 
             val eventDescription = buildString {
                 append("Emoción: ${tarea.emocion?.name}")
@@ -113,14 +113,13 @@ object CalendarioSync {
             val ev = Event().apply {
                 summary = tarea.titulo
                 description = eventDescription
-                extendedProperties = Event.ExtendedProperties()
-                    .setPrivate(mapOf("tareaId" to tarea.idTarea))
+                extendedProperties = Event.ExtendedProperties().setPrivate(mapOf("tareaId" to tarea.idTarea))
                 reminders = Reminders().apply {
                     useDefault = false
                     overrides = emptyList()
                 }
                 start = EventDateTime().setDate(DateTime(startStr))
-                end   = EventDateTime().setDate(DateTime(endStr))
+                end = EventDateTime().setDate(DateTime(endStr))
             }
 
             val existing = existingMap[tarea.idTarea]
