@@ -2,7 +2,7 @@
   <img src="icono.png" alt="Logo" width="150"/>
 </p>
 
-# Organizador Emocional 📱🧠
+# Organizador Emocional 
 
 Aplicación Android desarrollada en **Kotlin** como parte del **Trabajo de Fin de Grado (Universidad de Granada)**.  
 El objetivo es ayudar al usuario a **gestionar sus tareas diarias teniendo en cuenta su estado emocional**, combinando productividad con bienestar personal.  
@@ -11,13 +11,13 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 
 ---
 
-## 📲 Descargar
+## Descargar
 
-👉 **https://github.com/ceciliacarpe/OrganizadorEmocional/releases/latest/download/Organizador.Emocional.apk**  
+ **https://github.com/ceciliacarpe/OrganizadorEmocional/releases/latest/download/Organizador.Emocional.apk**  
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Registro diario de estado de ánimo 
 - Creación, edición y eliminación de tareas con **prioridad y emoción asociada**  
@@ -29,7 +29,7 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 
 ---
 
-## 🖼️ Capturas
+## Capturas
 
 <p align="center">
   <img src="captura_home.png" width="20%"/>
@@ -39,7 +39,7 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Lenguaje:** Kotlin  
 - **Arquitectura:**  Model–View–ViewModel, LiveData  
@@ -50,14 +50,14 @@ Incluye registro de estado de ánimo, orden adaptativo de tareas por **costo emo
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la licencia **Apache 2.0**.  
 Consulta el archivo [LICENSE](LICENSE) para más información.  
 
 ---
 
-## 👩‍🎓 Información académica
+## Información académica
 
 **Trabajo de Fin de Grado (TFG)** en Ingeniería Informática  
 **Universidad de Granada (UGR)** – Curso 2024/2025  
